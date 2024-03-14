@@ -1,0 +1,163 @@
+.custom-margin-left {
+    margin-left: -10px;
+}
+
+/* Remove default gutter spacing between columns */
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* Adjust spacing between columns to fit all items in one row */
+.row {
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+/* Adjust margin for each column */
+.col-md-3 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+p2 text-center{
+    font-weight: bold;
+}
+
+/* Adjust image height to align bottoms */
+.item img {
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+  /* Style for footer */
+
+
+
+/* Custom styles */
+
+
+.item {
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+/* Additional styles can be added here */
+.navbar-custom {
+    background-color: #23D4DF ;
+}
+.navbar-dark .navbar-brand {
+    margin-right: 100px ;
+}
+.custom-margin-left {
+    margin-left: 0; /* Remove the left margin */
+}
+.text-center.bold {
+    font-weight: bolder;
+}
+
+.offset-md-0.item:nth-child(1) {
+    margin-left: 1px; /* Adjusted margin-left to 1px */
+}
+.text-left {
+    text-align: left;
+}
+/* CSS for star rating */
+.star-rating {
+    font-size: 24px; /* Adjust size of stars */
+    color: gold; /* Color of stars */
+    margin-top: 0px; /* Set margin-top to 0 */
+}
+
+.star {
+    display: inline-block; /* Make stars appear horizontally */
+    margin-right: 2px; /* Add space between stars */
+}
+
+/* Remove margin and padding for the p1 class */
+.p1 {
+    margin: 0;
+    padding: 0;
+}
+/* CSS for Add to Cart button */
+.btn-add-to-cart {
+    display: block;
+    background-color: #23D4DF;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 0; /* Remove any margin */
+}
+
+.plus-sign {
+    margin-right: 5px; /* Add space between "+" symbol and text */
+}
+
+footer {
+    background-color: #455455;
+    padding: 40px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.col {
+    margin-bottom: 30px;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.underline {
+    width: 50px;
+    height: 2px;
+    background-color: #fff;
+    margin: 0 auto 10px auto;
+}
+
+.underline span {
+    width: 100%;
+    height: 100%;
+    background-color: #526061;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.email-id {
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+hr {
+    border-top: 1px solid #fff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    font-size: 14px;
+}

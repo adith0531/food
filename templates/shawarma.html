@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biriyani Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/biriyani.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: center;
+            position: relative;
+        }
+        .rating > span {
+            display: inline-block;
+            position: relative;
+            width: 1.1em;
+            font-size: 36px;
+            color: gold;
+        }
+<!--        .rating > span:hover:before,-->
+<!--        .rating > span:hover ~ span:before {-->
+<!--            content: "\2605";-->
+<!--            position: absolute;-->
+<!--            color: gold;-->
+<!--        }-->
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="#"> E Food </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-4">
+        <h1 class="text-center">Shawarma Menu</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="row no-gutters">
+                {% for x in data %}
+                <div class="col-md-3 custom-margin-left">
+                    <div class="item" style="margin-top: 10px;">
+                        {% if x.Maincategory.Maincategory == 'Shawarma' %}
+                            <img src="{{x.Image.url}}" alt="Biriyani 1" class="img-fluid">
+                            <h2 class="text-center mt-2">{{x.Subcategory}}</h2>
+                            <p class="p1 text-left">{{x.Resturant_name}}</p>
+                            <h3 class="p2 text-center"><strong style="color: rgb(52, 208, 52);">₹ {{x.Price}}</strong></h3>
+                            <div class="rating">
+                                {% for star in x.star_rating %}
+                                    <span>&#x2605;</span>
+                                {% endfor %}
+                            </div>
+                            <button class="btn btn-primary btn-add-to-cart"><span class="plus-sign">+</span> Add to Cart</button>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="col">
+                <img src="{% static 'img/eaticon1.png' %}" width="150" height="120" class="logo">
+                <p>tfuiguioguyfrfrtfytd mydcfjyfdcjytdch cdrycfg fgchv </p>
+            </div>
+            <div class="col">
+                <h3>office <div class="underline"><span></span></div></h3>
+                <p>kaloor,kochi</p>
+                <p>Near Bus stand kaloor</p>
+                <p>Eranamkulam, PIN 64745 ,kerala</p>
+                <p class="email-id">eatfood@gmail.com</p>
+                <h4>+91-01234 6565345</h4>
+            </div>
+            <div class="col">
+                <h3>Links <div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Order</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Help</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>News Letter <div class="underline"><span></span></div></h3>
+                <form>
+                    <i class="bx bx-envelope"></i>
+                    <input type="email" placeholder="Enter Your Email id" required>
+                    <button type="submit"><i class='bx bx-right-arrow-alt' ></i></button>
+                </form>
+            </div>
+            <div class="social-icons">
+                <i class='bx bxl-facebook'></i>
+                <i class='bx bxl-instagram-alt' ></i>
+                <i class='bx bxl-twitter' ></i>
+                <i class='bx bxl-whatsapp' ></i>
+                <i class='bx bxl-linkedin' ></i>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Eat Food © 2024 - All Rights Reserved</p>
+    </footer>
+        // JavaScript code if needed
+    </script>
+</body>
+</html>
